@@ -15,9 +15,6 @@
 extern "C" {
     #ifdef ARDUINO
 
-void loop();
-void setup();
-
 #elif defined(ESP_PLATFORM)
 
 void app_main();
@@ -35,7 +32,7 @@ int main(int argc, char **argv);
 
 #define MAIN() \
 void loop(){ \
-    while(1){}
+    while(1){}\
 } \
 int call_setup();\
 void setup(){\
