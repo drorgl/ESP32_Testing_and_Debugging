@@ -5,3 +5,17 @@ The following are a collection of demos for a ESP32 Testing and Debugging facili
 
 Demo taken from https://github.com/platformio/platformio-examples/tree/develop/unit-testing/calculator
 
+```bash
+pio test -e native
+```
+
+
+# Static Code Analysis
+
+Demo taken from https://github.com/platformio/platformio-examples/tree/develop/unit-testing/calculator
+
+```bash
+pio check
+```
+
+

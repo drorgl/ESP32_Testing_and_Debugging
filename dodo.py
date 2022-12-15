@@ -22,3 +22,11 @@ def task_test_native():
         'verbosity': 2,
     }
 
+def check():
+    """Demo Static Code Analysis"""
+
+    return {
+        'actions': [CmdAction("pio check", cwd="./2.StaticCodeAnalysis")],
+        'verbosity': 2,
+    }
+
