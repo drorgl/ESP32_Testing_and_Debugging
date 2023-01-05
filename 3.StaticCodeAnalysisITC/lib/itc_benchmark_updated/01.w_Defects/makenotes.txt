@@ -1,0 +1,17 @@
+lines to change after
+autoconfig generate the Makefile
+-lm (for math functions) needs to be last on the linking line
+
+AM_LDFLAGS = -lm
+LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
+	$(AM_V_CCLD)$(LINK) $(01_w_Defects_OBJECTS) $(01_w_Defects_LDADD) $(LIBS) $(AM_LDFLAGS)
+
+.c.o:
+	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $< -lm
+	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+#	$(AM_V_CC)source='$<' object='$@' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(AM_V_CC_no)$(COMPILE) -c -o $@ $<
+
+.c.obj:
+	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ `$(CYGPATH_W) '$<'` -lm
