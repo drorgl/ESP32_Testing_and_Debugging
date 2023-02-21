@@ -2,3 +2,15 @@
 .doit.db.*
 
 __pycache__/
+*.ctu-info
+*/.tmp-kcc-*
+.cache
+*/core_dir/packages
+*/core_dir/platforms/native
+*/tmp.in.*
+/5.Tracing/*.log
+/5.Tracing/gdb.txt
+/6.SysView/.pio
+/6.SysView/esp32trace
+/6.SysView/*.svdat
+/6.SysView/sdkconfig.esp32dev.old
